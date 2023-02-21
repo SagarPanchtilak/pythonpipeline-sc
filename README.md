@@ -72,39 +72,12 @@
 
    In this pipeline , I'm not deploying application on sever, but when you build the Job you can use the applicayion in your localhost, port:5000. Check this [tutorial](https://www.youtube.com/watch?v=_o42ZCkCJb4) for further details to use Jenkinsfile in pipeline. The Artifactory stage that used in the Jenkinsfile will be coverd below.
 
-- ## JFrog Artifactory
-    <a href="https://jfrog.com/" ><img src="Images/jf.jpg" width="35" height=35></a>
-    JFrog Artifactory is a tool designed to store the binary output of the build process for use in distribution and deployment. Artifactory provides support for a number of package formats such as Maven, Debian, NPM, Helm, Ruby, Python, and Docker.
-    - An artifact is one of many kinds of tangible by-products produced during the development of software. Some artifacts (e.g., use cases, class diagrams, and other Unified Modeling Language (UML) models, requirements and design documents) help describe the function, architecture, and design of software.
-    - If we have resources like GitHub, why we require other tools? It is because we cannot store files of all formats on GitHub. To store executale files even if the size is large, Artifactory will supports them. It resolve dependencies when creating the build, and also as a target to deploy build output to the corresponding local repository. One of the main benefits of running builds through Artifactory is fully reproducible builds.
-    - We can store binaries of our application with different version and we can deploy or use them at any point.
-
-        <img src="Images/artifactory.jpg" width="400" height=200>
-
-    - You can use [jfrog](https://jfrog.com/open-source/) open source. Use this [tutorial](https://www.youtube.com/watch?v=Lg4a6Sc_Xco) to install artifactory as a service on windows.
-    - For Ubuntu use [this.](https://websiteforstudents.com/how-to-install-jfrog-artifactory-on-ubuntu-18-04-16-04/)
-    - Now in our machine artifactory will run as a service.
-    You can use the console to create repostories and explore. Also you can install JFrog - CLI to interact through terminal.
-    - Install [Chocolatey](https://chocolatey.org/docs/installation) and run the below command.
-    ```
-    choco install jfrog-cli
-    ```
-    - Before start using artifactory you need to configure the Artifactory URL, user and password by passing them in as command options. Here rt-server is the name of our server id, we give it any name and url is the link where your artifactory server is running, by defaut it will be http://localhost:8081/artifactory
-    ```
-    jfrog rt c rt-server --url=http://domain/artifactory --user=admin --password=password
-    ```
-    - To upload a file to a repository. Here gernic-local is a miscellaneous repository name, you can check it on console.
-    ```
-    jfrog rt u "path to your file" generic-local
-    ```
-    Visit [JFrog CLI](https://www.jfrog.com/confluence/display/CLI/CLI+for+JFrog+Artifactory) for more commands.
-
     You can deploy the application on any cloud platform or you can push the build image to docker hub.
 - ## References
     - [Python Flask Application](https://flask.palletsprojects.com/en/1.1.x/tutorial/)
     - [Python Testing](https://docs.python.org/3/library/unittest.html)
     - [Git & GitHub](https://www.datacamp.com/community/tutorials/git-push-pull)
     - [Jenkins](https://www.vogella.com/tutorials/Jenkins/article.html)
-    - [JFrog Artifactory](https://www.youtube.com/watch?v=WrKEozY9efQ)
-- ## Thank you :D
-    I have used many online resources while creating the application and I would like to thank them. As I'm also in a learning stage, I would like to know your feedback and suggestions as well. So please contact me at: ritheeshbaradwaj@gmail.com. 
+    
+- ## Thank you
+
